@@ -1,0 +1,71 @@
+import {
+  Heart, Brain, Baby, Bone, Stethoscope,
+  Eye, Pill, Activity, Zap, Shield,
+} from "lucide-react";
+
+export const services = [
+  {
+    id: "cardiology",
+    title: "Cardiology",
+    icon: "Heart",
+    description: "Advanced cardiac care including angioplasty, bypass surgery, and heart failure management.",
+    color: "bg-red-50 text-red-500",
+    border: "border-red-100",
+  },
+  {
+    id: "neurology",
+    title: "Neurology",
+    icon: "Brain",
+    description: "Comprehensive stroke, epilepsy, and neuro-critical care with state-of-the-art imaging.",
+    color: "bg-purple-50 text-purple-500",
+    border: "border-purple-100",
+  },
+  {
+    id: "pediatrics",
+    title: "Pediatrics",
+    icon: "Baby",
+    description: "Specialised care for newborns, infants, and children with NICU and paediatric ICU.",
+    color: "bg-yellow-50 text-yellow-500",
+    border: "border-yellow-100",
+  },
+  {
+    id: "orthopedics",
+    title: "Orthopedics",
+    icon: "Bone",
+    description: "Joint replacement, sports medicine, and minimally invasive spine surgeries.",
+    color: "bg-blue-50 text-blue-500",
+    border: "border-blue-100",
+  },
+  {
+    id: "emergency",
+    title: "Emergency Care",
+    icon: "Zap",
+    description: "24/7 emergency services with rapid response team and trauma care unit.",
+    color: "bg-orange-50 text-orange-500",
+    border: "border-orange-100",
+  },
+  {
+    id: "oncology",
+    title: "Oncology",
+    icon: "Shield",
+    description: "Comprehensive cancer diagnosis, medical oncology, and targeted therapy.",
+    color: "bg-teal-50 text-teal-500",
+    border: "border-teal-100",
+  },
+  {
+    id: "general",
+    title: "General Medicine",
+    icon: "Stethoscope",
+    description: "Holistic outpatient and inpatient care for acute and chronic conditions.",
+    color: "bg-green-50 text-green-500",
+    border: "border-green-100",
+  },
+  {
+    id: "radiology",
+    title: "Radiology",
+    icon: "Activity",
+    description: "3T MRI, 128-slice CT, digital X-ray, and interventional radiology services.",
+    color: "bg-indigo-50 text-indigo-500",
+    border: "border-indigo-100",
+  },
+];
