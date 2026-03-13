@@ -1,16 +1,109 @@
-# React + Vite
+# PuneCare Multi-Speciality Hospital – Room Booking Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **hospital room booking web application** built with **React, Vite, and Tailwind CSS**.  
+This project is developed as part of an **internship task at Hashedbit Innovations**.
 
-Currently, two official plugins are available:
+The application allows patients to browse hospital rooms, view details, and book rooms through a smooth and modern booking experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Frontend  
+- React (Vite)
+- Tailwind CSS
+- Framer Motion
 
-## Expanding the ESLint configuration
+Libraries  
+- React Router
+- Headless UI
+- Swiper.js
+- Lucide Icons / React Icons
+- TanStack Query
+- React Hook Form
+- Zustand (State Management)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Features
+
+- Browse available hospital rooms
+- View detailed room information
+- Filter rooms by availability
+- Room booking modal
+- Select check-in date and duration
+- Patient information form
+- Automatic booking ID generation
+- Booking confirmation page
+- Responsive design
+- Smooth UI animations
+
+---
+
+## Booking System
+
+Each booking generates a unique **Booking ID**.
+
+Example format:
+HSP-2026-XXXX
+
+
+Booking confirmation includes:
+
+- Booking ID
+- Patient Name
+- Room Type
+- Check-in Date
+- Duration
+- Total Price
+- Hospital Contact Information
+
+Users can also **download or print booking confirmation**.
+
+---
+
+## Hospital Information
+
+**PuneCare Multi-Speciality Hospital**
+
+Baner Road  
+Pune, Maharashtra – 411045
+
+Emergency: +91 20 6123 9999  
+WhatsApp: +91 98765 43210  
+Email: care@punecarehospital.com
+
+---
+
+## Room Pricing
+
+| Room Type | Price / Day |
+|-----------|-------------|
+| ICU | ₹12,000 |
+| Emergency | ₹8,500 |
+| Deluxe Room | ₹7,200 |
+| Private Room | ₹5,000 |
+| General Ward | ₹1,800 |
+
+---
+
+## Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/vishalkumar0911/punecare-hospital-landing-page.git
+
+npm install
+npm run dev
+
+Project Status
+
+🚧 Currently under development.
+
+Additional sections and improvements are being added as part of the internship project.
+
+Author
+
+Vishal Kumar
+GitHub: https://github.com/vishalkumar0911
