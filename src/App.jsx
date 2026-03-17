@@ -3,6 +3,7 @@ import MainLayout from "./layouts/MainLayout";
 import HomePage from "./pages/HomePage";
 import RoomsPage from "./pages/RoomsPage";
 import DoctorsPage from "./pages/DoctorsPage";
+import ServicesPage from "./pages/ServicesPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import BookingConfirmationPage from "./pages/BookingConfirmationPage";
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/"         element={<HomePage />}             />
         <Route path="/rooms"    element={<RoomsPage />}            />
         <Route path="/doctors"  element={<DoctorsPage />}          />
+        <Route path="/services" element={<ServicesPage />}         />
         <Route path="/about"    element={<AboutPage />}            />
         <Route path="/contact"  element={<ContactPage />}          />
         <Route path="/booking-confirmation" element={<BookingConfirmationPage />} />

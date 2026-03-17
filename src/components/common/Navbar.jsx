@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+﻿import { useState, useEffect } from "react";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import {
   motion,
   AnimatePresence,
@@ -20,15 +20,14 @@ import {
 } from "lucide-react";
 
 import { NAV_LINKS, HOSPITAL } from "../../utils/constants";
-import { useUIStore } from "../../store/uiStore";
 import { cn } from "../../utils/cn";
 
 /* Animation easing */
 const EASE = [0.22, 1, 0.36, 1];
 
-/* ───────────────────────────────── */
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 /* Top Bar */
-/* ───────────────────────────────── */
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 function TopBar() {
   return (
@@ -54,7 +53,7 @@ function TopBar() {
 
           <span className="flex items-center gap-1.5 opacity-80">
             <Clock size={11} />
-            OPD: Mon–Sat · 9:00 AM – 8:00 PM
+                        OPD: Mon-Sat - 9:00 AM - 8:00 PM
           </span>
         </div>
 
@@ -80,9 +79,9 @@ function TopBar() {
   );
 }
 
-/* ───────────────────────────────── */
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 /* Logo */
-/* ───────────────────────────────── */
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 function Logo() {
   return (
@@ -124,9 +123,9 @@ function Logo() {
   );
 }
 
-/* ───────────────────────────────── */
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 /* Desktop Nav Link */
-/* ───────────────────────────────── */
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 function DesktopLink({ href, label }) {
   return (
@@ -135,7 +134,7 @@ function DesktopLink({ href, label }) {
       end={href === "/"}
       className={({ isActive }) =>
         cn(
-          "relative text-[13.5px] font-semibold pb-0.5 transition-colors duration-200 group",
+          "relative rounded-full px-1.5 py-1 text-[13.5px] font-semibold transition-colors duration-200 group",
           isActive ? "text-primary-600" : "text-gray-500 hover:text-gray-900"
         )
       }
@@ -162,9 +161,9 @@ function DesktopLink({ href, label }) {
   );
 }
 
-/* ───────────────────────────────── */
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 /* Mobile Link */
-/* ───────────────────────────────── */
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 function MobileLink({ href, label, onClick }) {
   return (
@@ -199,9 +198,9 @@ function MobileLink({ href, label, onClick }) {
   );
 }
 
-/* ───────────────────────────────── */
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 /* Emergency Button */
-/* ───────────────────────────────── */
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 function EmergencyBtn({ compact = false }) {
   return (
@@ -228,16 +227,16 @@ function EmergencyBtn({ compact = false }) {
   );
 }
 
-/* ───────────────────────────────── */
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 /* Navbar */
-/* ───────────────────────────────── */
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const { openBookingModal } = useUIStore();
   const { pathname } = useLocation();
+  const navigate = useNavigate();
   const { scrollY, scrollYProgress } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (y) => setScrolled(y > 20));
@@ -276,7 +275,7 @@ export default function Navbar() {
 
             {/* Desktop Nav */}
 
-            <nav className="hidden lg:flex items-center gap-8">
+            <nav className="hidden lg:flex items-center gap-6 rounded-full border border-white/70 bg-white/75 px-4 py-2 shadow-[0_12px_30px_rgba(15,23,42,0.05)] backdrop-blur-sm">
               {NAV_LINKS.map((l) => (
                 <DesktopLink key={l.href} {...l} />
               ))}
@@ -288,13 +287,13 @@ export default function Navbar() {
               <EmergencyBtn />
 
               <motion.button
-                onClick={() => openBookingModal(null)}
+                onClick={() => navigate("/rooms")}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="relative flex items-center gap-2 text-[13px] font-bold text-white
                 bg-gradient-to-r from-primary-600 to-accent-500
                 px-5 py-[10px] rounded-xl overflow-hidden
-                shadow-[0_6px_24px_rgba(37,99,235,0.35)]"
+                shadow-[0_10px_28px_rgba(37,99,235,0.28)]"
               >
                 <motion.span
                   className="absolute inset-0 bg-gradient-to-r from-blue-400/30 to-teal-400/30 blur-xl"
@@ -340,7 +339,7 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ type: "spring", stiffness: 260, damping: 25 }}
-                className="absolute top-full inset-x-0 bg-white shadow-xl lg:hidden"
+                className="absolute top-full inset-x-0 border-t border-gray-100 bg-white/96 shadow-[0_20px_60px_rgba(15,23,42,0.12)] backdrop-blur-xl lg:hidden"
               >
                 <div className="p-4 space-y-2">
                   {NAV_LINKS.map((l, i) => (
@@ -354,6 +353,20 @@ export default function Navbar() {
                     </motion.div>
                   ))}
                 </div>
+
+                <div className="border-t border-gray-100 px-4 pb-4 pt-1">
+                  <motion.button
+                    onClick={() => {
+                      setMobileOpen(false);
+                      navigate("/rooms");
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                    className="flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-primary-600 to-accent-500 px-4 py-3.5 text-[13.5px] font-bold text-white shadow-[0_12px_30px_rgba(37,99,235,0.24)]"
+                  >
+                    <Calendar size={15} />
+                    Book Room
+                  </motion.button>
+                </div>
               </motion.div>
             </>
           )}
@@ -362,3 +375,4 @@ export default function Navbar() {
     </>
   );
 }
+

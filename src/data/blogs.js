@@ -31,7 +31,7 @@ export const blogs = [
     category: "General Health",
     categoryColor: "bg-teal-50 text-teal-600",
     excerpt:
-      "Leptospirosis, typhoid, malaria — Pune's monsoon brings several health risks. Know the warning signs early.",
+      "Leptospirosis, typhoid, malaria - Pune's monsoon brings several health risks. Know the warning signs early.",
     image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600&q=80",
     author: "Dr. Meera Patil",
     authorRole: "General Physician",

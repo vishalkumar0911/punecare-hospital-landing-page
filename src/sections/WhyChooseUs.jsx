@@ -1,5 +1,6 @@
-import { useRef } from "react";
+﻿import { useRef } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   Clock, Award, Stethoscope, ShieldCheck,
   Pill, Ambulance, Wifi, CreditCard,
@@ -8,7 +9,7 @@ import {
 
 const EASE = [0.22, 1, 0.36, 1];
 
-/* ── reason cards data ── */
+/* â”€â”€ reason cards data â”€â”€ */
 const REASONS = [
   {
     icon: Clock,
@@ -24,7 +25,7 @@ const REASONS = [
   {
     icon: Award,
     title: "NABH Accredited",
-    desc: "India's highest hospital accreditation standard — ensuring every process meets stringent quality and safety benchmarks.",
+    desc: "India's highest hospital accreditation standard - ensuring every process meets stringent quality and safety benchmarks.",
     accent: "from-primary-500 to-accent-500",
     lightBg: "bg-primary-50",
     iconColor: "text-primary-600",
@@ -35,7 +36,7 @@ const REASONS = [
   {
     icon: Stethoscope,
     title: "150+ Expert Doctors",
-    desc: "Board-certified specialists from AIIMS, NIMHANS, KEM, and Tata Memorial — Pune's finest medical minds.",
+    desc: "Board-certified specialists from AIIMS, NIMHANS, KEM, and Tata Memorial - Pune's finest medical minds.",
     accent: "from-teal-500 to-emerald-500",
     lightBg: "bg-teal-50",
     iconColor: "text-teal-600",
@@ -57,7 +58,7 @@ const REASONS = [
   {
     icon: Pill,
     title: "24/7 Pharmacy",
-    desc: "In-hospital pharmacy stocked with all critical medications, generics, and surgical consumables — open around the clock.",
+    desc: "In-hospital pharmacy stocked with all critical medications, generics, and surgical consumables - open around the clock.",
     accent: "from-green-500 to-teal-500",
     lightBg: "bg-green-50",
     iconColor: "text-green-600",
@@ -68,7 +69,7 @@ const REASONS = [
   {
     icon: CreditCard,
     title: "Cashless Insurance",
-    desc: "Tied up with 25+ major insurers including Star Health, HDFC ERGO, Niva Bupa — fully cashless admissions.",
+    desc: "Tied up with 25+ major insurers including Star Health, HDFC ERGO, Niva Bupa - fully cashless admissions.",
     accent: "from-accent-500 to-cyan-500",
     lightBg: "bg-accent-50/70",
     iconColor: "text-accent-600",
@@ -90,7 +91,7 @@ const REASONS = [
   {
     icon: Wifi,
     title: "Digital Health Records",
-    desc: "Fully paperless EMR system — access your reports, prescriptions, and discharge summaries anytime via our patient portal.",
+    desc: "Fully paperless EMR system - access your reports, prescriptions, and discharge summaries anytime via our patient portal.",
     accent: "from-indigo-500 to-blue-500",
     lightBg: "bg-indigo-50",
     iconColor: "text-indigo-500",
@@ -100,7 +101,7 @@ const REASONS = [
   },
 ];
 
-/* ── Reason card ── */
+/* â”€â”€ Reason card â”€â”€ */
 function ReasonCard({ reason, index }) {
   const ref    = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-52px" });
@@ -166,7 +167,7 @@ function ReasonCard({ reason, index }) {
   );
 }
 
-/* ── Left visual panel ── */
+/* â”€â”€ Left visual panel â”€â”€ */
 function VisualPanel() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -177,7 +178,7 @@ function VisualPanel() {
 
   const highlights = [
     "Cardiology, Neurology & 28 more specialities",
-    "NABH · ISO · JCI · NABL certified",
+    "NABH - ISO - JCI - NABL certified",
     "Cashless with 25+ insurance providers",
     "In-house pharmacy & diagnostics",
     "Digital reports via patient portal",
@@ -297,9 +298,9 @@ function VisualPanel() {
   );
 }
 
-/* ═══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    WHY CHOOSE US SECTION
-═══════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 export default function WhyChooseUs() {
   const headRef = useRef(null);
   const headIn  = useInView(headRef, { once: true, margin: "-48px" });
@@ -317,7 +318,7 @@ export default function WhyChooseUs() {
 
       <div className="max-w-7xl mx-auto relative">
 
-        {/* ── Section header ── */}
+        {/* â”€â”€ Section header â”€â”€ */}
         <div ref={headRef} className="text-center mb-20">
           <motion.span
             initial={{ opacity: 0, y: 14 }}
@@ -358,7 +359,7 @@ export default function WhyChooseUs() {
           </motion.p>
         </div>
 
-        {/* ── Two-column layout ── */}
+        {/* â”€â”€ Two-column layout â”€â”€ */}
         <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-16 items-start mb-20">
 
           {/* Left: visual + checklist */}
@@ -388,7 +389,7 @@ export default function WhyChooseUs() {
           </div>
         </div>
 
-        {/* ── Bottom CTA strip ── */}
+        {/* â”€â”€ Bottom CTA strip â”€â”€ */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -429,27 +430,30 @@ export default function WhyChooseUs() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
-              <motion.a
-                href="/rooms"
+              <motion.div
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0 14px 40px rgba(37,99,235,0.50)",
                 }}
                 whileTap={{ scale: 0.96 }}
-                className="flex items-center gap-2.5 bg-gradient-to-r
-                           from-primary-500 to-accent-500 text-white
-                           font-bold text-[14.5px] px-8 py-4 rounded-2xl
-                           shadow-lg transition-all duration-200"
               >
-                <Clock size={17} />
-                Book a Room
-                <motion.span
-                  animate={{ x: [0, 4, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
+                <Link
+                  to="/rooms"
+                  className="flex items-center gap-2.5 bg-gradient-to-r
+                             from-primary-500 to-accent-500 text-white
+                             font-bold text-[14.5px] px-8 py-4 rounded-2xl
+                             shadow-lg transition-all duration-200"
                 >
-                  <ArrowRight size={15} />
-                </motion.span>
-              </motion.a>
+                  <Clock size={17} />
+                  Book a Room
+                  <motion.span
+                    animate={{ x: [0, 4, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    <ArrowRight size={15} />
+                  </motion.span>
+                </Link>
+              </motion.div>
 
               <motion.a
                 href="tel:+912061239999"
@@ -472,3 +476,4 @@ export default function WhyChooseUs() {
     </section>
   );
 }
+

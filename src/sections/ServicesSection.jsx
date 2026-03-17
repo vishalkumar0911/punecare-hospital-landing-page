@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+﻿import { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
@@ -10,13 +10,13 @@ import {
 
 const EASE = [0.22, 1, 0.36, 1];
 
-/* ── icon map (string → component) ── */
+/* â”€â”€ icon map (string â†’ component) â”€â”€ */
 const ICONS = {
   Heart, Brain, Baby, Bone, Zap, Shield,
   Stethoscope, Activity, Eye, Wind, Microscope,
 };
 
-/* ── services data ── */
+/* â”€â”€ services data â”€â”€ */
 const SERVICES = [
   {
     id: "cardiology",
@@ -37,7 +37,7 @@ const SERVICES = [
     icon: "Brain",
     title: "Neurology",
     shortDesc: "Comprehensive stroke, epilepsy & neuro-critical care.",
-    detail: "NIMHANS-trained neurologists offering stroke thrombolysis, EEG, nerve conduction studies, and advanced neuro-imaging — all under one roof.",
+    detail: "NIMHANS-trained neurologists offering stroke thrombolysis, EEG, nerve conduction studies, and advanced neuro-imaging - all under one roof.",
     tag: "Advanced",
     tagColor: "bg-purple-50 text-purple-600 border-purple-100",
     accent: "from-purple-500 to-violet-600",
@@ -132,7 +132,7 @@ const SERVICES = [
   },
 ];
 
-/* ── Service card ── */
+/* â”€â”€ Service card â”€â”€ */
 function ServiceCard({ service, index, isActive, onHover }) {
   const ref    = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
@@ -225,7 +225,7 @@ function ServiceCard({ service, index, isActive, onHover }) {
   );
 }
 
-/* ── Highlight banner ── */
+/* â”€â”€ Highlight banner â”€â”€ */
 function ServiceHighlight() {
   const ref    = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-48px" });
@@ -270,7 +270,7 @@ function ServiceHighlight() {
             30+ Specialities Under One Roof
           </h3>
           <p className="text-white/75 text-[14.5px] mt-2 max-w-lg leading-relaxed">
-            From dermatology to urology — PuneCare covers every medical need
+            From dermatology to urology - PuneCare covers every medical need
             with expert doctors and modern infrastructure.
           </p>
         </div>
@@ -307,9 +307,9 @@ function ServiceHighlight() {
   );
 }
 
-/* ═══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    SERVICES SECTION
-═══════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 export default function ServicesSection() {
   const [activeId, setActiveId] = useState(null);
   const headRef = useRef(null);
@@ -324,7 +324,7 @@ export default function ServicesSection() {
 
       <div className="max-w-7xl mx-auto relative">
 
-        {/* ── Section header ── */}
+        {/* â”€â”€ Section header â”€â”€ */}
         <div ref={headRef} className="text-center mb-16">
           <motion.span
             initial={{ opacity: 0, y: 14 }}
@@ -360,7 +360,7 @@ export default function ServicesSection() {
             className="text-[16.5px] text-gray-400 mt-4
                        max-w-xl mx-auto leading-relaxed"
           >
-            From routine check-ups to complex surgeries — PuneCare's 30+
+            From routine check-ups to complex surgeries - PuneCare's 30+
             specialities are staffed by board-certified experts committed to
             your best outcomes.
           </motion.p>
@@ -388,7 +388,7 @@ export default function ServicesSection() {
           </motion.div>
         </div>
 
-        {/* ── Cards grid ── */}
+        {/* â”€â”€ Cards grid â”€â”€ */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {SERVICES.map((s, i) => (
             <ServiceCard
@@ -401,7 +401,7 @@ export default function ServicesSection() {
           ))}
         </div>
 
-        {/* ── CTA Banner ── */}
+        {/* â”€â”€ CTA Banner â”€â”€ */}
         <ServiceHighlight />
 
       </div>

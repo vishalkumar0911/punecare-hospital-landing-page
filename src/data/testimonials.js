@@ -17,7 +17,7 @@ export const testimonials = [
     rating: 5,
     avatar: "https://i.pravatar.cc/80?img=12",
     review:
-      "Booked a deluxe room for my wife's surgery. The facilities were impeccable – clean, comfortable, and the staff was extremely professional and caring.",
+      "Booked a deluxe room for my wife's surgery. The facilities were impeccable - clean, comfortable, and the staff was extremely professional and caring.",
     date: "February 2026",
     room: "Deluxe Room",
   },

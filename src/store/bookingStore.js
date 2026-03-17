@@ -55,6 +55,15 @@ export const useBookingStore = create((set, get) => ({
     }, 1500);
   },
 
+  resetBookingFlow: () =>
+    set((state) => ({
+      selectedRoom: state.selectedRoom,
+      bookingForm: initialBookingForm,
+      confirmedBooking: null,
+      bookingStep: 1,
+      isSubmitting: false,
+    })),
+
   resetBooking: () =>
     set({
       selectedRoom:     null,

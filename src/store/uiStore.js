@@ -8,7 +8,7 @@ export const useUIStore = create((set) => ({
   scrolled:           false,
 
   openBookingModal: (room) =>
-    set({ isBookingModalOpen: true, activeRoom: room }),
+    room ? set({ isBookingModalOpen: true, activeRoom: room }) : set({ isBookingModalOpen: false }),
 
   closeBookingModal: () =>
     set({ isBookingModalOpen: false }),

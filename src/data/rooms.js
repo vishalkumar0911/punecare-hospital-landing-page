@@ -13,7 +13,7 @@ export const rooms = [
     availability: AVAILABILITY.LIMITED,
     rating: 4.9,
     reviewCount: 128,
-    floor: "3rd Floor – Wing A",
+    floor: "3rd Floor - Wing A",
     capacity: 1,
     facilities: [
       "24/7 Intensivist on duty",
@@ -41,7 +41,7 @@ export const rooms = [
     availability: AVAILABILITY.AVAILABLE,
     rating: 4.8,
     reviewCount: 95,
-    floor: "Ground Floor – Emergency Block",
+    floor: "Ground Floor - Emergency Block",
     capacity: 1,
     facilities: [
       "24/7 Emergency physician",
@@ -69,7 +69,7 @@ export const rooms = [
     availability: AVAILABILITY.AVAILABLE,
     rating: 4.7,
     reviewCount: 214,
-    floor: "5th Floor – Deluxe Wing",
+    floor: "5th Floor - Deluxe Wing",
     capacity: 1,
     facilities: [
       "Private washroom",
@@ -98,7 +98,7 @@ export const rooms = [
     availability: AVAILABILITY.AVAILABLE,
     rating: 4.6,
     reviewCount: 312,
-    floor: "4th Floor – Private Wing",
+    floor: "4th Floor - Private Wing",
     capacity: 1,
     facilities: [
       "Private washroom",
@@ -116,6 +116,35 @@ export const rooms = [
   },
   {
     id: "room-005",
+    type: ROOM_TYPES.SUITE,
+    name: "Executive Care Suite",
+    shortDesc:
+      "An ultra-premium suite designed for post-surgical recovery, VIP admissions, and extended family-assisted stays.",
+    price: 9800,
+    image:
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&q=80",
+    availability: AVAILABILITY.LIMITED,
+    rating: 4.9,
+    reviewCount: 164,
+    floor: "6th Floor - Signature Wing",
+    capacity: 2,
+    facilities: [
+      "Private washroom",
+      "Smart LED TV (43 inch)",
+      "Attendant couch / sofa",
+      "Refrigerator",
+      "Wi-Fi",
+      "Central AC",
+      "Nurse call system",
+      "Daily housekeeping",
+      "Oxygen supply",
+    ],
+    highlights: ["VIP Privacy", "Priority Nursing", "Family Stay Friendly"],
+    badge: "Luxury",
+    badgeColor: "bg-fuchsia-100 text-fuchsia-700",
+  },
+  {
+    id: "room-006",
     type: ROOM_TYPES.GENERAL,
     name: "General Ward",
     shortDesc:
@@ -126,7 +155,7 @@ export const rooms = [
     availability: AVAILABILITY.AVAILABLE,
     rating: 4.3,
     reviewCount: 487,
-    floor: "2nd Floor – General Block",
+    floor: "2nd Floor - General Block",
     capacity: 6,
     facilities: [
       "Shared washroom",

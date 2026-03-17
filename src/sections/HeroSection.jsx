@@ -1,6 +1,7 @@
-// src/sections/HeroSection.jsx
+﻿// src/sections/HeroSection.jsx
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import {
   Calendar,
   Phone,
@@ -16,7 +17,6 @@ import {
   Zap,
 } from "lucide-react";
 import { HOSPITAL } from "../utils/constants";
-import { useUIStore } from "../store/uiStore";
 
 /* tiny cn helper */
 const cn = (...c) => c.filter(Boolean).join(" ");
@@ -196,12 +196,12 @@ function HeroImage() {
                 <p className="font-heading font-bold text-gray-900 text-[13.5px] truncate">
                   Deluxe Private Room
                 </p>
-                <p className="text-[11.5px] text-gray-400 mt-0.5">5th Floor · Wing A · AC</p>
+                <p className="text-[11.5px] text-gray-400 mt-0.5">5th Floor - Wing A - AC</p>
               </div>
 
               <div className="text-right shrink-0">
                 <p className="font-heading font-extrabold text-primary-600 text-[14px]">
-                  ₹7,200
+                  INR 7,200
                 </p>
                 <p className="text-[11px] text-gray-400">per day</p>
               </div>
@@ -259,12 +259,12 @@ function HeroImage() {
 
 /* HERO SECTION (export default) */
 export default function HeroSection() {
-  const { openBookingModal } = useUIStore();
+  const navigate = useNavigate();
 
   const checks = [
     "NABH & ISO 9001:2015 Accredited",
     "150+ Specialist Doctors On-Site",
-    "Cashless Insurance — All Major Insurers",
+    "Cashless Insurance - All Major Insurers",
     "24/7 Emergency & Trauma Care",
   ];
 
@@ -301,7 +301,7 @@ export default function HeroSection() {
                   <Shield size={9} /> NABH
                 </span>
                 <span className="text-[12px] font-semibold text-gray-600">
-                  Accredited · ISO 9001:2015 · 25 Years of Excellence
+                                    Accredited - ISO 9001:2015 - 25 Years of Excellence
                 </span>
               </div>
             </motion.div>
@@ -333,7 +333,7 @@ export default function HeroSection() {
 
             {/* Subtitle */}
             <motion.p variants={fadeSlide} className="text-[17px] text-gray-500 leading-[1.8] max-w-[500px]">
-              PuneCare brings world-class multi-speciality care to Baner, Pune —
+              PuneCare brings world-class multi-speciality care to Baner, Pune -
               with seamless online room booking, 150+ expert doctors,
               and 24/7 emergency support.
             </motion.p>
@@ -357,7 +357,7 @@ export default function HeroSection() {
             {/* CTA buttons (primary has soft glow) */}
             <motion.div variants={fadeSlide} className="flex flex-wrap gap-3 pt-1">
               <motion.button
-                onClick={() => openBookingModal(null)}
+                onClick={() => navigate("/rooms")}
                 aria-label="Book a room"
                 whileHover={{ scale: 1.045, boxShadow: "0 16px 44px rgba(37,99,235,0.40)" }}
                 whileTap={{ scale: 0.95 }}
@@ -425,6 +425,8 @@ export default function HeroSection() {
 const checks = [
   "NABH & ISO 9001:2015 Accredited",
   "150+ Specialist Doctors On-Site",
-  "Cashless Insurance — All Major Insurers",
+  "Cashless Insurance - All Major Insurers",
   "24/7 Emergency & Trauma Care",
 ];
+
+
