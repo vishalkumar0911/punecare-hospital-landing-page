@@ -1,84 +1,84 @@
 # PuneCare Multi-Speciality Hospital – Room Booking Platform
 
-A modern **hospital room booking web application** built with **React, Vite, and Tailwind CSS**.  
-This project is developed as part of an **internship task at Hashedbit Innovations**.
+A modern **hospital room booking web application** built using **React, Vite, and Tailwind CSS**.
 
-The application allows patients to browse hospital rooms, view details, and book rooms through a smooth and modern booking experience.
+This project was developed as part of an **internship task at Hashedbit Innovations**, focusing on building a **premium healthcare UI with a complete booking workflow**.
 
 ---
 
-## Tech Stack
+## 🚀 Tech Stack
 
 Frontend  
-- React (Vite)
-- Tailwind CSS
-- Framer Motion
+- React (Vite)  
+- Tailwind CSS  
+- Framer Motion  
 
 Libraries  
-- React Router
-- Headless UI
-- Swiper.js
-- Lucide Icons / React Icons
-- TanStack Query
-- React Hook Form
-- Zustand (State Management)
+- React Router  
+- Headless UI  
+- Swiper.js  
+- Lucide Icons / React Icons  
+- TanStack Query  
+- React Hook Form  
+- Zustand (State Management)  
 
 ---
 
-## Features
+## ✨ Features
 
-- Browse available hospital rooms
-- View detailed room information
-- Filter rooms by availability
-- Room booking modal
-- Select check-in date and duration
-- Patient information form
-- Automatic booking ID generation
-- Booking confirmation page
-- Responsive design
-- Smooth UI animations
+- Browse available hospital rooms  
+- View detailed room information  
+- Filter rooms by availability  
+- Interactive room booking modal  
+- Select check-in date and duration  
+- Patient details form with validation  
+- Automatic booking ID generation  
+- Booking confirmation page  
+- Download / Print booking details  
+- Fully responsive design  
+- Smooth UI animations  
 
 ---
 
-## Booking System
+## 📄 Booking System
 
 Each booking generates a unique **Booking ID**.
 
-Example format:
-HSP-2026-XXXX
+Example:
 
+```
+HSP-2026-XXXX
+```
 
 Booking confirmation includes:
 
-- Booking ID
-- Patient Name
-- Room Type
-- Check-in Date
-- Duration
-- Total Price
-- Hospital Contact Information
-
-Users can also **download or print booking confirmation**.
+- Booking ID  
+- Patient Name  
+- Room Type  
+- Check-in Date  
+- Duration  
+- Total Price  
+- Hospital Contact Information  
 
 ---
 
-## Hospital Information
+## 🏥 Hospital Information
 
-**PuneCare Multi-Speciality Hospital**
+**PuneCare Multi-Speciality Hospital**  
 
 Baner Road  
-Pune, Maharashtra – 411045
+Pune, Maharashtra – 411045  
 
 Emergency: +91 20 6123 9999  
 WhatsApp: +91 98765 43210  
-Email: care@punecarehospital.com
+Email: care@punecarehospital.com  
 
 ---
 
-## Room Pricing
+## 🛏 Room Pricing
 
 | Room Type | Price / Day |
-|-----------|-------------|
+|-----------|------------|
 | ICU | ₹12,000 |
 | Emergency | ₹8,500 |
 | Deluxe Room | ₹7,200 |
@@ -87,23 +87,40 @@ Email: care@punecarehospital.com
 
 ---
 
-## Installation
+## ⚙️ Installation
 
-Clone the repository
+Clone the repository:
 
 ```bash
 git clone https://github.com/vishalkumar0911/punecare-hospital-landing-page.git
+```
 
+Install dependencies:
+
+```bash
 npm install
+```
+
+Run the development server:
+
+```bash
 npm run dev
+```
 
-Project Status
+---
 
-🚧 Currently under development.
+## 🌐 Live Demo
 
-Additional sections and improvements are being added as part of the internship project.
+https://punecare-hospital-landing-page.vercel.app/
+---
 
-Author
+## 📌 Project Status
 
-Vishal Kumar
+✅ Completed as part of internship task at **Hashedbit Innovations**
+
+---
+
+## 👨‍💻 Author
+
+**Vishal Kumar**  
 GitHub: https://github.com/vishalkumar0911
