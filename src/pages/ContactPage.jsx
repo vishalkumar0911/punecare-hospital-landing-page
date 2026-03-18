@@ -43,13 +43,13 @@ export default function ContactPage() {
             <Phone size={13} />
             Contact PuneCare
           </span>
-          <h1 className="mt-4 font-heading text-[36px] font-extrabold leading-[1.03] tracking-[-0.03em] text-gray-900 sm:mt-5 sm:text-[54px]">
+          <h1 className="fluid-title-lg mt-4 text-gray-900 sm:mt-5">
             Reach the Hospital
             <span className="bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent">
               {" "}Without Friction
             </span>
           </h1>
-          <p className="mt-4 max-w-2xl text-[15.5px] leading-relaxed text-gray-500 sm:mt-5 sm:text-[16.5px]">
+          <p className="balanced-copy mt-4 max-w-2xl sm:mt-5">
             Contact information, emergency lines, and location details live here in one
             place so patients and families can get support fast.
           </p>
@@ -81,13 +81,13 @@ export default function ContactPage() {
               <a
                 key={title}
                 href={href}
-                className="group flex min-h-[205px] flex-col rounded-[28px] border border-gray-100 bg-white/95 p-5 shadow-[0_20px_50px_rgba(37,99,235,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-primary-100 hover:shadow-[0_24px_60px_rgba(37,99,235,0.12)] sm:p-6"
+                className="group flex min-h-[205px] min-w-0 flex-col rounded-[28px] border border-gray-100 bg-white/95 p-5 shadow-[0_20px_50px_rgba(37,99,235,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-primary-100 hover:shadow-[0_24px_60px_rgba(37,99,235,0.12)] sm:p-6"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-50 text-primary-600 transition-transform duration-300 group-hover:scale-105">
                   <Icon size={20} />
                 </div>
                 <p className="mt-5 text-[12px] font-bold uppercase tracking-[0.18em] text-gray-400">{title}</p>
-                <p className={`mt-3 font-heading text-[18px] font-bold leading-tight text-gray-900 sm:text-[20px] ${valueClassName}`}>
+                <p className={`mt-3 min-w-0 font-heading text-[18px] font-bold leading-tight text-gray-900 sm:text-[20px] ${valueClassName}`}>
                   {value}
                 </p>
                 <span className="mt-auto pt-4 text-[12px] font-semibold text-primary-500">

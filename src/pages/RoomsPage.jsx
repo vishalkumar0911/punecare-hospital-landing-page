@@ -28,13 +28,13 @@ export default function RoomsPage() {
               <CalendarDays size={13} />
               Structured Booking Flow
             </span>
-            <h1 className="mt-4 font-heading text-[34px] font-extrabold leading-[1.05] tracking-[-0.03em] text-gray-900 sm:mt-5 sm:text-[52px]">
+            <h1 className="fluid-title-lg mt-4 text-gray-900 sm:mt-5">
               Select Your Room First,
               <span className="bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent">
                 {" "}Then Continue Booking
               </span>
             </h1>
-            <p className="mt-4 max-w-2xl text-[15.5px] leading-relaxed text-gray-500 sm:mt-5 sm:text-[16.5px]">
+            <p className="balanced-copy mt-4 max-w-2xl sm:mt-5">
               Browse available categories, compare amenities, and select the best-fit room
               before entering patient details. This keeps the booking journey clear, guided,
               and professional.
@@ -47,12 +47,12 @@ export default function RoomsPage() {
             transition={{ duration: 0.7, delay: 0.1, ease: EASE }}
             className="mt-8 grid gap-4 lg:grid-cols-[1.2fr_0.8fr]"
           >
-            <div className="rounded-[28px] border border-gray-100 bg-white/95 p-5 shadow-[0_20px_48px_rgba(37,99,235,0.08)] sm:p-6">
+            <div className="surface-card p-5 sm:p-6">
               <div className="flex items-start gap-3">
                 <div className="mt-1 flex h-11 w-11 items-center justify-center rounded-2xl bg-primary-50 text-primary-600">
                   <ShieldCheck size={18} />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <h2 className="font-heading text-[18px] font-bold text-gray-900">How booking works</h2>
                   <div className="mt-4 grid gap-3 sm:grid-cols-3">
                     {[
@@ -72,10 +72,10 @@ export default function RoomsPage() {
             <div className="rounded-[28px] border border-primary-100 bg-gradient-to-br from-primary-50 via-white to-accent-50/60 p-5 shadow-[0_20px_52px_rgba(37,99,235,0.10)] sm:p-6">
               <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-primary-600">Selected Room</p>
               {selectedRoom ? (
-                <div className="mt-4">
+                <div className="mt-4 min-w-0">
                   <h3 className="font-heading text-[20px] font-extrabold text-gray-900">{selectedRoom.name}</h3>
                   <p className="mt-1 text-[13px] text-gray-500">{selectedRoom.floor}</p>
-                  <p className="mt-3 text-[26px] font-extrabold text-primary-600">
+                  <p className="mt-3 break-words text-[24px] font-extrabold text-primary-600 sm:text-[26px]">
                     {formatCurrency(selectedRoom.price)}
                     <span className="ml-1 text-[13px] font-semibold text-primary-400">/ day</span>
                   </p>

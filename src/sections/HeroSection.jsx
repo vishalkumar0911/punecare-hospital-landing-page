@@ -62,7 +62,7 @@ function FloatCard({
           ease: "easeInOut",
           delay: floatDelay,
         }}
-        className="flex items-center gap-3 px-4 py-3.5 rounded-2xl min-w-[162px]
+        className="flex min-w-0 items-center gap-3 px-4 py-3.5 rounded-2xl
                    bg-white/78 backdrop-blur-2xl
                    border border-white/80
                    shadow-[0_20px_60px_rgba(37,99,235,0.18),0_4px_20px_rgba(0,0,0,0.06)]"
@@ -71,11 +71,11 @@ function FloatCard({
           <Icon size={17} className={accent} />
         </div>
 
-        <div>
-          <p className="font-heading font-extrabold text-gray-900 text-[14.5px] leading-none">
+        <div className="min-w-0">
+          <p className="truncate font-heading text-[14.5px] font-extrabold leading-none text-gray-900">
             {value}
           </p>
-          <p className="text-[11px] text-gray-400 mt-[3px] font-medium">{label}</p>
+          <p className="mt-[3px] truncate text-[11px] font-medium text-gray-400">{label}</p>
         </div>
       </motion.div>
     </motion.div>
@@ -162,11 +162,11 @@ function HeroImage() {
               src="https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=900&q=85"
               alt="Deluxe hospital room"
               loading="lazy"
-              className="w-full h-[400px] lg:h-[465px] object-cover"
-            />
+            className="h-[320px] w-full object-cover sm:h-[380px] lg:h-[465px]"
+          />
 
             {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/28 via-gray-900/4 to-white/4" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/48 via-slate-900/14 to-white/6" />
 
             {/* Shimmer sweep on load */}
             <motion.div
@@ -184,13 +184,13 @@ function HeroImage() {
             initial={{ opacity: 0, y: 16, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ delay: 1.2, duration: 0.55, ease: EASE }}
-            className="absolute bottom-5 left-4 right-4"
+            className="absolute bottom-4 left-3 right-3 sm:bottom-5 sm:left-4 sm:right-4"
           >
             <div
               className="bg-white/94 backdrop-blur-2xl rounded-2xl px-5 py-4
                             shadow-[0_14px_52px_rgba(0,0,0,0.13)]
                             border border-white/95
-                            flex items-center gap-4"
+                            flex flex-wrap items-center gap-3 sm:flex-nowrap sm:gap-4"
             >
               <div className="flex-1 min-w-0">
                 <p className="font-heading font-bold text-gray-900 text-[13.5px] truncate">
@@ -199,7 +199,7 @@ function HeroImage() {
                 <p className="text-[11.5px] text-gray-400 mt-0.5">5th Floor - Wing A - AC</p>
               </div>
 
-              <div className="text-right shrink-0">
+              <div className="shrink-0 text-left sm:text-right">
                 <p className="font-heading font-extrabold text-primary-600 text-[14px]">
                   INR 7,200
                 </p>
@@ -207,9 +207,9 @@ function HeroImage() {
               </div>
 
               <div
-                className="flex items-center gap-1.5 bg-emerald-50 text-emerald-600
+                className="ml-auto flex items-center gap-1.5 bg-emerald-50 text-emerald-600
                               border border-emerald-200/70 text-[11px] font-bold
-                              px-2.5 py-1.5 rounded-lg shrink-0"
+                              px-2.5 py-1.5 rounded-lg shrink-0 sm:ml-0"
               >
                 <motion.span
                   className="w-1.5 h-1.5 bg-emerald-500 rounded-full"
@@ -231,7 +231,7 @@ function HeroImage() {
         <FloatCard icon={Star} value="4.9 / 5" label="Patient Rating" bg="bg-amber-50" accent="text-amber-500" floatDelay={0.5} />
       </div>
       <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 z-20 hidden xl:block">
-        <FloatCard icon={Clock} value="24 / 7" label="Emergency Care" bg="bg-red-50" accent="text-red-500" floatDelay={1} />
+        <FloatCard icon={Clock} value="24/7" label="Emergency Care" bg="bg-red-50" accent="text-red-500" floatDelay={1} />
       </div>
 
       {/* Orbiting icon accents */}
@@ -261,15 +261,8 @@ function HeroImage() {
 export default function HeroSection() {
   const navigate = useNavigate();
 
-  const checks = [
-    "NABH & ISO 9001:2015 Accredited",
-    "150+ Specialist Doctors On-Site",
-    "Cashless Insurance - All Major Insurers",
-    "24/7 Emergency & Trauma Care",
-  ];
-
   return (
-    <section className="relative overflow-hidden min-h-[calc(100vh-110px)] flex items-center">
+    <section className="relative flex min-h-[calc(100vh-110px)] items-center overflow-hidden">
       {/* Layered background with noise-bg utility (ensure .noise-bg exists in your CSS as added earlier) */}
       <div className="absolute inset-0 -z-10 overflow-hidden noise-bg">
         <div className="absolute inset-0 bg-gradient-to-br from-[#EBF3FF] via-[#EEF9F7] to-[#F6F9FF]" />
@@ -287,28 +280,28 @@ export default function HeroSection() {
         </svg>
       </div>
 
-      <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 py-16 lg:py-20">
-        <div className="grid lg:grid-cols-[1.08fr_0.92fr] gap-14 lg:gap-10 items-center">
+      <div className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:py-20">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10">
           {/* LEFT */}
-          <motion.div variants={container} initial="hidden" animate="show" className="space-y-6 max-w-[600px]">
+          <motion.div variants={container} initial="hidden" animate="show" className="max-w-[600px] space-y-5 sm:space-y-6">
             {/* Accreditation pill */}
             <motion.div variants={fadeSlide}>
               <div className="inline-flex items-center gap-2 bg-white/82 backdrop-blur-sm
                               border border-primary-200/50 rounded-full
-                              pl-2 pr-5 py-1.5 shadow-[0_2px_14px_rgba(37,99,235,0.10)]">
+                              pl-2 pr-4 py-1.5 shadow-[0_2px_14px_rgba(37,99,235,0.10)] sm:pr-5">
                 <span className="flex items-center gap-1.5 bg-primary-600 text-white
                                  text-[10.5px] font-bold px-2.5 py-1 rounded-full">
                   <Shield size={9} /> NABH
                 </span>
-                <span className="text-[12px] font-semibold text-gray-600">
-                                    Accredited - ISO 9001:2015 - 25 Years of Excellence
+                <span className="text-[11px] font-semibold text-gray-600 sm:text-[12px]">
+                  Accredited - ISO 9001:2015 - 25 Years of Excellence
                 </span>
               </div>
             </motion.div>
 
             {/* Headline */}
             <motion.div variants={fadeSlide}>
-              <h1 className="font-heading font-extrabold text-gray-900 text-[44px] sm:text-[54px] lg:text-[62px] leading-[1.03] tracking-[-0.036em]">
+              <h1 className="fluid-title-xl text-gray-900">
                 Advanced
                 <br />
                 <span className="relative inline-block">
@@ -332,24 +325,24 @@ export default function HeroSection() {
             </motion.div>
 
             {/* Subtitle */}
-            <motion.p variants={fadeSlide} className="text-[17px] text-gray-500 leading-[1.8] max-w-[500px]">
+            <motion.p variants={fadeSlide} className="balanced-copy max-w-[500px]">
               PuneCare brings world-class multi-speciality care to Baner, Pune -
               with seamless online room booking, 150+ expert doctors,
               and 24/7 emergency support.
             </motion.p>
 
             {/* Checklist */}
-            <motion.ul variants={fadeSlide} className="grid grid-cols-1 sm:grid-cols-2 gap-y-2.5 gap-x-6">
+            <motion.ul variants={fadeSlide} className="grid grid-cols-1 gap-x-6 gap-y-2.5 sm:grid-cols-2">
               {checks.map((c, i) => (
                 <motion.li
                   key={c}
                   initial={{ opacity: 0, x: -14 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.55 + i * 0.08, duration: 0.5, ease: EASE }}
-                  className="flex items-center gap-2.5 text-[13px] font-medium text-gray-600"
+                  className="flex min-w-0 items-start gap-2.5 text-[13px] font-medium text-gray-600"
                 >
-                  <CheckCircle2 size={15} className="text-teal-500 shrink-0" />
-                  {c}
+                  <CheckCircle2 size={15} className="shrink-0 text-teal-500" />
+                  <span className="min-w-0">{c}</span>
                 </motion.li>
               ))}
             </motion.ul>
@@ -362,9 +355,9 @@ export default function HeroSection() {
                 whileHover={{ scale: 1.045, boxShadow: "0 16px 44px rgba(37,99,235,0.40)" }}
                 whileTap={{ scale: 0.95 }}
                 className="relative group flex items-center gap-2.5 font-bold text-white
-                           text-[14.5px] bg-gradient-to-r from-primary-600 to-accent-500
-                           px-8 py-[15px] rounded-2xl overflow-hidden
-                           shadow-[0_6px_24px_rgba(37,99,235,0.34)] transition-shadow duration-200"
+                           text-[14px] bg-gradient-to-r from-primary-600 to-accent-500
+                           px-6 py-[14px] rounded-2xl overflow-hidden
+                           shadow-[0_6px_24px_rgba(37,99,235,0.34)] transition-shadow duration-200 sm:text-[14.5px] sm:px-8 sm:py-[15px]"
               >
                 {/* soft breathing glow */}
                 <motion.span
@@ -387,9 +380,9 @@ export default function HeroSection() {
                 whileHover={{ scale: 1.045, backgroundColor: "rgba(235,243,255,0.95)" }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2.5 font-bold text-primary-700
-                           text-[14.5px] border-2 border-primary-200/80
+                           text-[14px] border-2 border-primary-200/80
                            bg-white/80 backdrop-blur-sm
-                           px-8 py-[15px] rounded-2xl transition-all duration-200 shadow-sm"
+                           px-6 py-[14px] rounded-2xl transition-all duration-200 shadow-sm sm:text-[14.5px] sm:px-8 sm:py-[15px]"
               >
                 <Phone size={17} />
                 {HOSPITAL.emergency}
@@ -421,7 +414,6 @@ export default function HeroSection() {
   );
 }
 
-/* local helper: checks (kept here to avoid external dependency) */
 const checks = [
   "NABH & ISO 9001:2015 Accredited",
   "150+ Specialist Doctors On-Site",

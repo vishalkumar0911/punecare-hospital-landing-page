@@ -27,13 +27,13 @@ export default function DoctorsPage() {
                 <Stethoscope size={13} />
                 PuneCare Specialists
               </span>
-              <h1 className="mt-4 font-heading text-[36px] font-extrabold leading-[1.03] tracking-[-0.03em] text-gray-900 sm:mt-5 sm:text-[54px]">
+              <h1 className="fluid-title-lg mt-4 text-gray-900 sm:mt-5">
                 Expert Doctors Across
                 <span className="bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent">
                   {" "}Every Major Discipline
                 </span>
               </h1>
-              <p className="mt-4 max-w-2xl text-[15.5px] leading-relaxed text-gray-500 sm:mt-5 sm:text-[16.5px]">
+              <p className="balanced-copy mt-4 max-w-2xl sm:mt-5">
                 Explore consultant backgrounds, years of experience, consultation fees, and
                 availability. This route is designed as a dedicated specialist discovery page.
               </p>
@@ -52,11 +52,11 @@ export default function DoctorsPage() {
                   { icon: Globe2, value: `${specialists.length}+`, label: "Specialities represented" },
                   { icon: Stethoscope, value: "AIIMS+", label: "Top medical backgrounds" },
                 ].map(({ icon: Icon, value, label }) => (
-                  <div key={label} className="bg-gradient-to-br from-white to-slate-50 p-5 sm:p-6">
+                  <div key={label} className="min-w-0 bg-gradient-to-br from-white to-slate-50 p-5 sm:p-6">
                     <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary-50 text-primary-600 shadow-sm">
                       <Icon size={18} />
                     </div>
-                    <p className="mt-5 font-heading text-[28px] font-extrabold text-gray-900">{value}</p>
+                    <p className="stat-value mt-5">{value}</p>
                     <p className="mt-2 text-[13px] font-medium text-gray-500">{label}</p>
                   </div>
                 ))}

@@ -42,13 +42,13 @@ export default function ServicesPage() {
                 <Activity size={13} />
                 Clinical Services
               </span>
-              <h1 className="mt-4 font-heading text-[36px] font-extrabold leading-[1.03] tracking-[-0.03em] text-gray-900 sm:mt-5 sm:text-[54px]">
+              <h1 className="fluid-title-lg mt-4 text-gray-900 sm:mt-5">
                 Care Pathways Built for
                 <span className="bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent">
                   {" "}Modern Multi-Speciality Care
                 </span>
               </h1>
-              <p className="mt-4 max-w-2xl text-[15.5px] leading-relaxed text-gray-500 sm:mt-5 sm:text-[16.5px]">
+              <p className="balanced-copy mt-4 max-w-2xl sm:mt-5">
                 This page focuses entirely on treatment capabilities, departments, and clinical
                 strength. It's separate from room booking and specialist browsing so patients can
                 understand hospital services clearly.
@@ -59,7 +59,7 @@ export default function ServicesPage() {
               initial={{ opacity: 0, x: 28 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.08, ease: EASE }}
-              className="rounded-[28px] border border-gray-100 bg-white/90 p-5 shadow-[0_20px_56px_rgba(37,99,235,0.08)] backdrop-blur-sm sm:rounded-[32px] sm:p-6"
+              className="surface-card p-5 sm:rounded-[32px] sm:p-6"
             >
               <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-primary-500">Service Snapshot</p>
               <div className="mt-5 grid gap-3 sm:grid-cols-2">
@@ -88,8 +88,8 @@ export default function ServicesPage() {
               ["150+", "Specialist consultants"],
               [String(services.length), "Core featured services"],
             ].map(([value, label]) => (
-              <div key={label} className="rounded-[28px] border border-gray-100 bg-gradient-to-br from-white to-slate-50 p-5 shadow-[0_20px_44px_rgba(37,99,235,0.08)]">
-                <p className="font-heading text-[28px] font-extrabold text-gray-900">{value}</p>
+              <div key={label} className="surface-card p-5">
+                <p className="stat-value">{value}</p>
                 <p className="mt-2 text-[13px] font-medium text-gray-500">{label}</p>
               </div>
             ))}

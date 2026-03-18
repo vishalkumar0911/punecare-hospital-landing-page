@@ -41,13 +41,13 @@ export default function AboutPage() {
               <Activity size={13} />
               About PuneCare
             </span>
-            <h1 className="mt-4 font-heading text-[36px] font-extrabold leading-[1.03] tracking-[-0.03em] text-gray-900 sm:mt-5 sm:text-[54px]">
+            <h1 className="fluid-title-lg mt-4 text-gray-900 sm:mt-5">
               Quality, Trust, and Clinical Excellence
               <span className="bg-gradient-to-r from-primary-600 to-teal-500 bg-clip-text text-transparent">
                 {" "}in One Hospital Platform
               </span>
             </h1>
-            <p className="mt-4 max-w-2xl text-[15.5px] leading-relaxed text-gray-500 sm:mt-5 sm:text-[16.5px]">
+            <p className="balanced-copy mt-4 max-w-2xl sm:mt-5">
               Learn what makes PuneCare trusted across Pune, from governance and patient
               communication to modern infrastructure and accreditation-backed care standards.
             </p>
